@@ -1,0 +1,4 @@
+repository "ChemBine-PTv1.0.0/ChemBine-PTv1.0.0@18967055614274@cloud"
+  path "/"
+    br "/main"
+    co "/main"
