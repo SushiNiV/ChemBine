@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5d61ca849005c9d42868abf99b76f560
+guid: 4cbea6ed45ad4a84fa24f7ceb48efbd8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4779671929340272607
-    second: ShortToggle_0
+      213: -2799692873189853672
+    second: Arrow Left_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShortToggle_0
+      name: Arrow Left_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 132
-        width: 206
-        height: 86
+        x: 57
+        y: 0
+        width: 219
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdf9b33cb4ec45240800000000000000
-      internalID: 4779671929340272607
+      spriteID: 816735d4a2e7529d0800000000000000
+      internalID: -2799692873189853672
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ShortToggle_0: 4779671929340272607
+      Arrow Left_0: -2799692873189853672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
