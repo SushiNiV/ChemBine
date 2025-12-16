@@ -55,4 +55,15 @@ public class SceneTransition : MonoBehaviour
 
         canvasGroup.blocksRaycasts = false;
     }
+    public static void LoadSceneStatic(string sceneName)
+    {
+        if (Instance != null)
+        {
+            Instance.LoadScene(sceneName);
+        }
+        else
+        {
+            Debug.LogError("SceneTransition instance not found in scene!");
+        }
+    }
 }

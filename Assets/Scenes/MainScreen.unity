@@ -864,7 +864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PLAY
+  m_text: 'LEARN
 
 '
   m_isRightToLeft: 0
@@ -3252,8 +3252,9 @@ GameObject:
   - component: {fileID: 673905971}
   - component: {fileID: 673905970}
   - component: {fileID: 673905973}
+  - component: {fileID: 673905974}
   m_Layer: 5
-  m_Name: Explore
+  m_Name: PLAY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3323,10 +3324,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1249752134}
-        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
+      - m_Target: {fileID: 673905974}
+        m_TargetAssemblyTypeName: ButtonSceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3387,6 +3388,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 910115967}
   buttonClick: {fileID: 8300000, guid: 70bcb105300d96e49bb439004a9da630, type: 3}
+--- !u!114 &673905974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673905968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9f4d043c0cfd242a2de19bbcb03016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Sandbox
 --- !u!1 &716295163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5280,7 +5294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXPLORE
+  m_text: PLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c3b1c4e0ac7794dbf2a723cd156816, type: 2}
   m_sharedMaterial: {fileID: -7266422160116599244, guid: 49c3b1c4e0ac7794dbf2a723cd156816, type: 2}
@@ -7838,7 +7852,7 @@ GameObject:
   - component: {fileID: 1923825848}
   - component: {fileID: 1923825851}
   m_Layer: 5
-  m_Name: PLAY
+  m_Name: LEARN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
