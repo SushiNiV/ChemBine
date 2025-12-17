@@ -32,3 +32,5 @@ Thumbs.db
 *.VC.db
 .vsconfig
 ignore.conf
+
+APKs/

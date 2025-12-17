@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class SettingsDefault : MonoBehaviour
@@ -13,45 +13,40 @@ public class SettingsDefault : MonoBehaviour
     public Animator settingsAnimator;
 
     [Header("Animation Settings")]
-    public string closeTriggerName = "Close";
-    public float animationBuffer = 0.05f;
+    public string closeAnimationName = "PanelPopOut";
+    public float animationDuration = 0.15f;
+
     public void CloseSettings()
     {
         if (settingsAnimator != null)
         {
-            settingsAnimator.SetTrigger(closeTriggerName);
+            settingsAnimator.Play(closeAnimationName);
             StartCoroutine(WaitForCloseAnimation());
         }
         else
         {
             settingsPanel.SetActive(false);
-            StartCoroutine(ResetAfterClose());
         }
     }
+
     private IEnumerator WaitForCloseAnimation()
     {
-        if (settingsAnimator == null)
-            yield break;
-
-        AnimatorStateInfo stateInfo = settingsAnimator.GetCurrentAnimatorStateInfo(0);
-        float animationLength = stateInfo.length + animationBuffer;
-
-        yield return new WaitForSeconds(animationLength);
+        yield return new WaitForSeconds(animationDuration);
 
         if (settingsPanel != null)
             settingsPanel.SetActive(false);
-
-        StartCoroutine(ResetAfterClose());
     }
-    private IEnumerator ResetAfterClose()
-    {
-        yield return null;
 
-        if (defaultTab != null)
-            defaultTab.ActivateTab();
-    }
     private void OnEnable()
     {
+        StartCoroutine(ResetToDefaultTab());
+    }
+
+    private IEnumerator ResetToDefaultTab()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return null;
+
         if (defaultTab != null)
             defaultTab.ActivateTab();
     }
