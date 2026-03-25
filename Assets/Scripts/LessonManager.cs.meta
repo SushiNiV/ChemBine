@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 300427f02fab09a49a622c0a80364b73
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - contentStrip: {instanceID: 0}
+  - panelPrefab: {instanceID: 0}
+  - nextBT: {instanceID: 0}
+  - prevBT: {instanceID: 0}
+  - progressBar: {instanceID: 0}
+  - lessonPrefab: {fileID: 559502790205189231, guid: 0c785140211335846bdfa310e1aca90f, type: 3}
+  - quizPrefab: {fileID: 559502790205189231, guid: c36eddd7bd41eab44a13bbef94bb0e20, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

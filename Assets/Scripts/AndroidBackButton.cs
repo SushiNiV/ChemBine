@@ -1,35 +1,41 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class AndroidBackButton : MonoBehaviour
 {
-    public string previousSceneName;
+    private static string lastSceneName;
+
+    void Awake()
+    {
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            GoToPreviousScene();
+            GoBack();
         }
     }
 
-    private void GoToPreviousScene()
+    public void LoadNewScene(string sceneToLoad)
     {
-        if (!string.IsNullOrEmpty(previousSceneName))
+        lastSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
+    private void GoBack()
+    {
+        if (!string.IsNullOrEmpty(lastSceneName))
         {
-            SceneManager.LoadScene(previousSceneName);
+            SceneManager.LoadScene(lastSceneName);
+
+            lastSceneName = null;
         }
         else
         {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            if (currentSceneIndex > 0)
-            {
-                SceneManager.LoadScene(currentSceneIndex - 1);
-            }
-            else
-            {
-                Application.Quit();
-            }
+            Debug.Log("No previous scene recorded. Quitting...");
+            Application.Quit();
         }
     }
 }
